@@ -32,5 +32,9 @@
   "Role": {
     "dataSource": "mysql",
     "public": false
+  },
+  "user": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
