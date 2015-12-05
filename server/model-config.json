@@ -15,7 +15,7 @@
   },
   "User": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "AccessToken": {
     "dataSource": "mysql",
