@@ -4,7 +4,6 @@ module.exports = function(app) {
   var Role = app.models.Role;
   var RoleMapping = app.models.RoleMapping;
 
-
   // Create admin user
   User.findOne({
     where: {
@@ -20,14 +19,23 @@ module.exports = function(app) {
       }, function(err, user) {
         if (err) throw err;
 
-        console.log("admin@fitribe.com is created");
-        console.log("- id: " + user.id);
+        // Create admin role
+        Role.create({
+          name: 'admin'
+        }, function(err, role) {
+
+          // Make admin user as admin
+          role.principals.create({
+            principalType: RoleMapping.USER,
+            principalId: user.id
+          }, function(err, principal) {
+            if (err) throw err;
+          });
+
+        });
+
       });
-    } else {
-      console.log("admin@fitribe.com already exists");
-      console.log("- id: " + user.id);
     }
   });
 
-  // Create admin role
 };
