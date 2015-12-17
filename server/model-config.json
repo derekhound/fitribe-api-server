@@ -36,5 +36,9 @@
   "user": {
     "dataSource": "mysql",
     "public": true
+  },
+  "LocalStorage": {
+    "dataSource": "local-storage",
+    "public": true
   }
 }
