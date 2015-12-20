@@ -13,7 +13,7 @@
     "connector": "mysql"
   },
   "local-storage": {
-    "name": "storage",
+    "name": "local-storage",
     "connector": "loopback-component-storage",
     "provider": "filesystem",
     "root": "./server/storage"

@@ -40,5 +40,9 @@
   "LocalStorage": {
     "dataSource": "local-storage",
     "public": true
+  },
+  "CloudStorage": {
+    "dataSource": null,
+    "public": true
   }
 }
